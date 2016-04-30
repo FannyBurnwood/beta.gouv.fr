@@ -1,22 +1,14 @@
 $(function initHomepage() {
-	var currentIndex = 0,
-		total = $('#masthead .card').length;
 
-	function selectorForIndex(index) {
-		index %= total;
-		return '#masthead .card:nth-child(' + (index + 1) + ')';
-	}
+	$.tab();
 
-	function showExample(event) {
-		$(selectorForIndex(currentIndex) + ',' + selectorForIndex(currentIndex + 1))
-			.transition('fade right');
+	current = 1;
 
-		currentIndex++;
-	}
+	$('#otherExample')
+	  .on('click', function() {
+	    current = ((current + 1) % 3) + 1;
+	    $.tab('change tab', 't'+current);
+	  });
 
-
-	$('#masthead .card').transition('hide');
-	$(selectorForIndex(currentIndex)).transition('browse');
-
-	document.getElementById('otherExample').addEventListener('click', showExample);
+	$('#masthead .card').transition('browse');
 });

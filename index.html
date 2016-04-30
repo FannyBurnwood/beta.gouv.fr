@@ -3,23 +3,27 @@ additional_css: homepage
 additional_js: homepage
 ---
 
-<section id="masthead" class="ui two columns padded stackable grid">
-	<div class="column">
+<section id="masthead" class="ui three columns padded stackable grid">
+	<div class="eight wide column">
 		<h1>{{ site.description }}</h1>
-	</div>
-
-	<div class="column" id="example">
-		{% include startup-card.html id='mes-aides' %}
-		{% include startup-card.html id='labonneboite' %}
-		{% include startup-card.html id='mps' %}
-	</div>
-
-	<div class="column">
 		<a class="primary investigation cta" href="#cycle">Découvrez comment</a>
 	</div>
-	<div class="column">
-		<span class="cta" id="otherExample">Voir d'autres exemples&nbsp;➢</span>
+
+	<div style="min-height:500px;" class="six wide right floated column" id="example">
+		<div class="ui transition fade in top attached active tab segment" data-tab="t1">
+			{% include startup-card.html id='mes-aides' %}
+		</div>
+		<div class="ui transition fade in top attached tab segment" data-tab="t2">
+			{% include startup-card.html id='labonneboite' %}
+		</div>
+		<div class="ui transition fade in top attached tab segment" data-tab="t3">
+			{% include startup-card.html id='mps' %}
+		</div>
+		<div class="ui bottom attached tabular menu" id="examples">
+			<div class="item"><span class="cta" id="otherExample">Voir d'autres exemples&nbsp;➢</span></div>
+		</div>
 	</div>
+
 </section>
 
 <section id="cycle">

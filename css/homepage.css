@@ -11,6 +11,7 @@ body {
 	position: absolute;
 }
 
+
 #otherExample {
 	float: right;
 
@@ -25,10 +26,6 @@ body {
 
 #masthead .card, .no-js #otherExample {
 	visibility: hidden;
-}
-
-#masthead .card:first-child {
-	visibility: visible;
 }
 
 /* IE < 10, nothing is better than fracked layout */
